@@ -21,8 +21,8 @@ public class GamePanel extends JPanel implements ActionListener{
     static final int UNIT_SIZE = 25;
     static final int GAME_UNITS = (SCREEN_WIDTH * SCREEN_HEIGHT) / UNIT_SIZE;
     static final int DELAY = 75;
-    final int X[] = new int[GAME_UNITS];  
-    final int Y[] = new int[GAME_UNITS]; 
+    final int x[] = new int[GAME_UNITS];  
+    final int y[] = new int[GAME_UNITS]; 
     int bodyParts = 6;
     int applesEaten;
     int appleX;
@@ -76,6 +76,28 @@ public class GamePanel extends JPanel implements ActionListener{
     }
     
     public void move(){
+        
+        //LOOP THAT ITIRATES OVER ALL SNAKE BODY PARTS
+        for(int i = bodyParts; i > 0; i--){
+            x[i] = x[i-1];
+            y[i] = y[i-1];
+        }
+        
+        switch(direction){
+            case 'U':
+                y[0] = y[0] - UNIT_SIZE;
+                break;
+            case 'D':
+                y[0] = y[0] + UNIT_SIZE;
+                break;
+            case 'L':
+                x[0] = x[0] - UNIT_SIZE;
+                break;
+            case 'R':
+                x[0] = x[0] + UNIT_SIZE;
+                break;
+                
+        }
         
     }
     
