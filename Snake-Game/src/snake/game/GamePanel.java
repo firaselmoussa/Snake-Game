@@ -60,6 +60,8 @@ public class GamePanel extends JPanel implements ActionListener{
     }
     
     public void newApple(){
+        appleX = random.nextInt((int)(SCREEN_WIDTH / UNIT_SIZE))* UNIT_SIZE;
+        appleY = random.nextInt((int)(SCREEN_HEIGHT / UNIT_SIZE))* UNIT_SIZE;
         
     }
     
@@ -68,6 +70,9 @@ public class GamePanel extends JPanel implements ActionListener{
             g.drawLine(i*UNIT_SIZE, 0, i*UNIT_SIZE, SCREEN_HEIGHT);
             g.drawLine(0, i*UNIT_SIZE, SCREEN_WIDTH, i*UNIT_SIZE);
         }
+        
+        g.setColor(Color.red);
+        g.fillOval(appleX, appleY, UNIT_SIZE, UNIT_SIZE);
     }
     
     public void move(){
