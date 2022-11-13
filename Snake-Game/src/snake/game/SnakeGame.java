@@ -15,6 +15,9 @@ public class SnakeGame {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+//      CREATING A FRAME WITHOUT ASSIGNING IT TO ANY CLASS VARIABLE
+        new GameFrame();
     }
     
 }

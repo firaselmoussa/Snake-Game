@@ -14,6 +14,10 @@ import java.awt.event.ActionListener;
  * @author Firas
  */
 public class GamePanel extends JPanel implements ActionListener{
+    
+    GamePanel(){
+        
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
