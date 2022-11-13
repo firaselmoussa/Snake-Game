@@ -4,10 +4,10 @@
  */
 package snake.game;
 
-import java.awt.Graphics;
-import java.awt.event.ActionEvent;
-import javax.swing.JPanel;
-import java.awt.event.ActionListener;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.util.Random;
 
 
 /**
@@ -52,6 +52,13 @@ public class GamePanel extends JPanel implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
+    public class MyKeyAdapter extends KeyAdapter{
+        @Override
+        public void keyPressed(KeyEvent e){
+            
+        }
     }
     
 }
